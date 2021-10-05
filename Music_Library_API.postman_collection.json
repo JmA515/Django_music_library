@@ -8,26 +8,11 @@
 		{
 			"name": "Create_Song",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
-			},
-			"response": []
-		},
-		{
-			"name": "Update_Song",
-			"request": {
-				"method": "PATCH",
-				"header": [
-					{
-						"key": "Accept-Patch",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 5,\r\n    \"title\": \"Indestructible\",\r\n    \"artist\": \"Disturbed\",\r\n    \"album\": \"Indestructible\",\r\n    \"release_date\": \"2008-06-03\",\r\n    \"genre\": \"Hard Rock\"\r\n}",
+					"raw": "{\r\n    \"title\": \"a\",\r\n    \"artist\": \"b\",\r\n    \"album\": \"c\",\r\n    \"release_date\": \"2018-04-17\",\r\n    \"genre\": \"d\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -35,7 +20,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/music/5/",
+					"raw": "http://127.0.0.1:8000/music/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -46,7 +31,52 @@
 					"port": "8000",
 					"path": [
 						"music",
-						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Song",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"example title\",\r\n    \"artist\": \"some singer\",\r\n    \"album\": \"random name\",\r\n    \"release_date\": \"2000-05-03\",\r\n    \"genre\": \"some cool genre\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/music/18/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"music",
+						"18",
 						""
 					]
 				}
@@ -58,7 +88,22 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://127.0.0.1:8000/music/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"music",
+						"2",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -67,16 +112,45 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://127.0.0.1:8000/music/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"music",
+						""
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Delete_Song",
 			"request": {
-				"method": "GET",
+				"method": "DELETE",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://127.0.0.1:8000/music/20/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"music",
+						"20",
+						""
+					]
+				}
 			},
 			"response": []
 		}
