@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Song
 from .serializers import SongSerializer
 from rest_framework.views import APIView
-from rest_framework import response, serializers
+from rest_framework import response
 from rest_framework import status
 
 # Create your views here.
@@ -43,5 +43,6 @@ class SongDetail(APIView):
 
     def delete(self, request, pk):
         song = self.get_object(pk)
+        serializer = SongSerializer(song)
         song.delete()
-        return response.Response(song, status = status.HTTP_200_OK)
+        return response.Response(serializer.data, status = status.HTTP_200_OK)
